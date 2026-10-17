@@ -1,0 +1,302 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>KSCloud · 网络代理与流媒体解锁服务说明</title><meta name="description" content="KSCloud 提供多档网络代理服务：基础版、旗舰版与团队版，覆盖流量配额、设备并发数、流媒体解锁范围与线路类型。本页以说明书口吻陈述各档权益、使用前提与常见问题，便于按需选择。"><meta name="keywords" content="KSCloud, 网络代理, 流媒体解锁, IPLC 专线, 节点池, 设备在线, 套餐对比, 客户端配置"><meta name="robots" content="index,follow"><link rel="canonical" href="https://p-2c71dc4f2d.jsk05.cn/"><meta property="og:type" content="website"><meta property="og:title" content="KSCloud · 网络代理与流媒体解锁服务说明"><meta property="og:description" content="KSCloud 提供多档网络代理服务：基础版、旗舰版与团队版，覆盖流量配额、设备并发数、流媒体解锁范围与线路类型。本页以说明书口吻陈述各档权益、使用前提与常见问题，便于按需选择。"><meta property="og:url" content="https://p-2c71dc4f2d.jsk05.cn/"><meta property="og:site_name" content="KSCloud"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://p-2c71dc4f2d.jsk05.cn/", "name": "KSCloud · 网络代理与流媒体解锁服务说明", "description": "KSCloud 提供多档网络代理服务：基础版、旗舰版与团队版，覆盖流量配额、设备并发数、流媒体解锁范围与线路类型。本页以说明书口吻陈述各档权益、使用前提与常见问题，便于按需选择。", "inLanguage": "zh-CN"}</script><meta name="publisher-task" content="6f891f574248514f8f55326f:38f2420f1f940343c28b13edb20224db543b78e01057560dbc9aadb4e39e33e8:c93acde9f814354a26af"></head><body id="top"><style>
+:root{--ink:#0A0B09;--panel:#121410;--line:#262A24;--text:#E7E9E2;--muted:#8C9386;--neon:#B4FF3F;--neon-dim:#8FBF2F}
+*{box-sizing:border-box;margin:0;padding:0}
+html{}
+body{background:var(--ink);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line);background:rgba(10,11,9,.82);backdrop-filter:saturate(140%) blur(6px)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{font-weight:700;font-size:16px;letter-spacing:.04em;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:9px}
+.dot{width:9px;height:9px;background:var(--neon);border-radius:2px;box-shadow:0 0 12px var(--neon-dim)}
+.nav-links{display:flex;gap:clamp(14px,2.4vw,30px)}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:13.5px;letter-spacing:.02em;transition:color .2s}
+.nav-links a:hover{color:var(--neon)}
+
+/* HERO */
+.hero{padding:clamp(56px,9vw,120px) 0 clamp(48px,7vw,90px)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:start}
+.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--neon);margin-bottom:22px;font-weight:600}
+h1{font-size:clamp(38px,6.2vw,72px);line-height:1.02;font-weight:800;letter-spacing:-.02em;margin-bottom:24px}
+h1 span{color:var(--neon)}
+.lead{font-size:clamp(16px,1.6vw,18.5px);color:var(--muted);max-width:44ch;margin-bottom:30px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1px solid var(--line);padding:7px 13px;font-size:12.5px;color:var(--text);letter-spacing:.02em;border-radius:3px}
+.chip b{color:var(--neon);font-weight:600}
+
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.panel-head{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.panel-head h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.status{font-size:12px;color:var(--neon);display:flex;align-items:center;gap:7px}
+.status i{width:7px;height:7px;background:var(--neon);border-radius:50%;box-shadow:0 0 8px var(--neon-dim)}
+.row{display:flex;justify-content:space-between;align-items:baseline;padding:14px 20px;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:none}
+.row .k{font-size:13px;color:var(--muted)}
+.row .v{font-size:15px;font-weight:600;color:var(--text);font-variant-numeric:tabular-nums}
+.row .v em{color:var(--neon);font-style:normal}
+.bar{height:6px;background:var(--line);border-radius:3px;margin-top:6px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--neon)}
+
+/* SECTION */
+section{padding:clamp(56px,8vw,100px) 0;border-top:1px solid var(--line)}
+.sec-label{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--neon);margin-bottom:16px;font-weight:600}
+h2.big{font-size:clamp(26px,3.6vw,42px);font-weight:800;letter-spacing:-.01em;margin-bottom:18px;line-height:1.1}
+.sec-desc{color:var(--muted);max-width:60ch;margin-bottom:44px;font-size:16px}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px)}
+.step{border-left:2px solid var(--line);padding-left:22px}
+.step.on{border-left-color:var(--neon)}
+.step-n{font-size:13px;color:var(--neon);letter-spacing:.1em;font-weight:700;margin-bottom:10px}
+.step h3{font-size:18px;font-weight:700;margin-bottom:10px}
+.step p{font-size:14.5px;color:var(--muted)}
+
+/* PLANS TABLE */
+.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:6px}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th,td{text-align:left;padding:16px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{font-size:13px;letter-spacing:.06em;color:var(--muted);font-weight:600;background:var(--panel)}
+tbody tr:last-child td{border-bottom:none}
+.td-name{font-weight:700;font-size:16px;color:var(--text)}
+.td-name small{display:block;font-weight:400;font-size:12px;color:var(--muted);margin-top:3px;letter-spacing:.02em}
+.feat{font-size:14px;color:var(--text)}
+.feat.no{color:var(--muted)}
+.price{font-variant-numeric:tabular-nums;font-weight:700;color:var(--neon);font-size:15px}
+.rec{color:var(--neon);font-size:11px;letter-spacing:.1em;border:1px solid var(--neon-dim);padding:2px 7px;border-radius:3px;margin-left:8px;font-weight:600}
+.hl{background:rgba(180,255,63,.04)}
+
+/* CLIENTS */
+.clients{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,2.4vw,28px)}
+.client{border:1px solid var(--line);border-radius:6px;padding:24px;background:var(--panel)}
+.client h3{font-size:17px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:9px}
+.client h3::before{content:"";width:8px;height:8px;background:var(--neon);border-radius:2px}
+.client p{font-size:14px;color:var(--muted);margin-bottom:14px}
+.meta{font-size:12.5px;color:var(--text);border-top:1px dashed var(--line);padding-top:12px}
+.meta b{color:var(--neon);font-weight:600}
+
+/* FAQ */
+.faq{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(20px,3vw,44px)}
+.qa{border-bottom:1px solid var(--line);padding:20px 0}
+.qa dt{font-size:16px;font-weight:700;color:var(--text);margin-bottom:8px}
+.qa dd{font-size:14.5px;color:var(--muted)}
+.qa dt::before{content:"Q ";color:var(--neon);font-weight:800}
+
+footer{border-top:1px solid var(--line);padding:40px 0}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+.foot p{font-size:13px;color:var(--muted)}
+.foot a{color:var(--muted);text-decoration:none;font-size:13px}
+.foot a:hover{color:var(--neon)}
+
+@media(max-width:820px){
+  .hero-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .clients{grid-template-columns:1fr}
+  .faq{grid-template-columns:1fr}
+  .nav-links{display:none}
+}
+</style><nav class="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="brand"><span class="dot"></span>KSCloud</a>
+    <div class="nav-links">
+      <a href="#use">使用说明</a>
+      <a href="#plans">套餐对比</a>
+      <a href="#client">客户端</a>
+      <a href="#faq">常见问题</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top" class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">Network Access Service</p>
+      <h1>KSCloud<br><span>按档位划分的网络访问方案</span></h1>
+      <p class="lead">从基础版到团队版，三档方案在流量配额、设备并发数、流媒体解锁范围与线路类型上逐级递进。本页以规格表形式陈述每一项权益与限制，供你依据实际用量选取。</p>
+      <div class="chips">
+        <span class="chip">月付 / <b>年付</b> 双计价</span>
+        <span class="chip">最高 <b>1000GB</b> 月度流量</span>
+        <span class="chip">支持 <b>20 台</b>设备同时在线</span>
+        <span class="chip">IPLC 专线<b>可选</b></span>
+      </div>
+    </div>
+    <aside class="panel">
+      <div class="panel-head">
+        <h2>Spec Overview</h2>
+        <span class="status"><i></i>已就绪</span>
+      </div>
+      <div class="row"><span class="k">档位数量</span><span class="v">3</span></div>
+      <div class="row"><span class="k">入门月费</span><span class="v"><em>¥15</em> / 月</span></div>
+      <div class="row"><span class="k">流量区间</span><span class="v">100 – 1000 GB</span></div>
+      <div class="row"><span class="k">设备并发</span><span class="v">3 – 20 台</span></div>
+      <div class="row"><span class="k">计费方式</span><span class="v">按月 / 按年</span></div>
+      <div class="row">
+        <span class="k">年付相对月付的节省幅度</span>
+        <span class="v">约 17%（<em>10 个月价格享全年</em>）</span>
+        <div class="bar"><i></i></div>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<main>
+
+<section id="use" class="wrap">
+  <p class="sec-label">Getting Started</p>
+  <h2 class="big">三步完成接入</h2>
+  <p class="sec-desc">以下流程适用于全部档位。差异仅在于所配置的节点池与可用功能，操作步骤本身一致。</p>
+  <div class="steps">
+    <article class="step on">
+      <div class="step-n">STEP 01</div>
+      <h3>选定档位</h3>
+      <p>对照下方规格表确认所需流量与设备数。个人日常浏览通常落在基础版；含游戏加速或原生流媒体需求则考虑旗舰版；多人协作场景对应团队版。</p>
+    </article>
+    <article class="step on">
+      <div class="step-n">STEP 02</div>
+      <h3>导入订阅</h3>
+      <p>在支持的客户端中粘贴账户生成的订阅地址。客户端读取节点列表后会自动建立连接，无需手动逐项配置协议参数。</p>
+    </article>
+    <article class="step">
+      <div class="step-n">STEP 03</div>
+      <h3>切换节点</h3>
+      <p>按目标站点就近选择线路。若开启分流规则，可让本地直连、境外走代理，减少不必要的流量消耗并保留原有网络行为。</p>
+    </article>
+  </div>
+</section>
+
+<section id="plans" class="wrap">
+  <p class="sec-label">Plans Comparison</p>
+  <h2 class="big">套餐规格横向对比</h2>
+  <p class="sec-desc">价格为公开标价，年付为一次性支付全年费用。所有档位均包含基础流媒体解锁能力，区别在于解锁范围与线路品质。</p>
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>项目</th>
+          <th>基础版</th>
+          <th class="hl">旗舰版 <span class="rec">推荐</span></th>
+          <th>团队版</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="feat">月费</td>
+          <td class="price">¥15/月</td>
+          <td class="price hl">¥35/月</td>
+          <td class="price">¥85/月</td>
+        </tr>
+        <tr>
+          <td class="feat">年付价</td>
+          <td class="td-name">¥150/年</td>
+          <td class="hl">¥350/年</td>
+          <td>¥850/年</td>
+        </tr>
+        <tr>
+          <td class="feat">每月流量</td>
+          <td>100GB 极速流量</td>
+          <td class="hl">300GB 极速流量</td>
+          <td>1000GB 极速流量</td>
+        </tr>
+        <tr>
+          <td class="feat">设备同时在线</td>
+          <td>3 台</td>
+          <td class="hl">5 台</td>
+          <td>20 台</td>
+        </tr>
+        <tr>
+          <td class="feat">流媒体解锁</td>
+          <td>基础解锁</td>
+          <td class="hl">全节点原生解锁</td>
+          <td>全节点原生解锁</td>
+        </tr>
+        <tr>
+          <td class="feat">线路类型</td>
+          <td class="feat no">普通线路节点池</td>
+          <td class="hl">IPLC 专线游戏加速优化</td>
+          <td>VIP 专属高带宽节点</td>
+        </tr>
+        <tr>
+          <td class="feat">企业定制路由</td>
+          <td class="feat no">不支持</td>
+          <td class="feat no hl">不支持</td>
+          <td>支持</td>
+        </tr>
+        <tr>
+          <td class="feat">技术支持</td>
+          <td class="feat no">常规工单</td>
+          <td class="hl">7×24 优先工单</td>
+          <td>专属客户经理</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="client" class="wrap">
+  <p class="sec-label">Supported Clients</p>
+  <h2 class="big">兼容的客户端形态</h2>
+  <p class="sec-desc">下列为常见终端环境下的接入形态。具体安装来源请以官方渠道为准，此处仅描述适配关系，不提供未经核实的下载路径。</p>
+  <div class="clients">
+    <article class="client">
+      <h3>桌面端</h3>
+      <p>Windows 与 macOS 均可通过通用代理客户端导入订阅地址，适合长时间办公与大文件传输场景。</p>
+      <div class="meta">协议适配：<b>Clash / V2Ray 系</b> · 分流规则：<b>支持</b></div>
+    </article>
+    <article class="client">
+      <h3>移动终端</h3>
+      <p>iOS 与 Android 支持主流代理 App，可在系统层面接管指定应用的网络走向，实现选择性代理。</p>
+      <div class="meta">协议适配：<b>Shadowrocket / Clash Meta</b> · 后台常驻：<b>视系统策略</b></div>
+    </article>
+    <article class="client">
+      <h3>路由器级部署</h3>
+      <p>团队版支持将节点配置下沉至家庭或办公路由器，使局域网内多设备共享同一份流量配额。</p>
+      <div class="meta">适用档位：<b>团队版为主</b> · 定制路由：<b>支持</b></div>
+    </article>
+    <article class="client">
+      <h3>浏览器扩展</h3>
+      <p>轻量场景下可用浏览器插件仅接管当前标签页流量，避免影响本机其他程序的正常联网。</p>
+      <div class="meta">作用范围：<b>单标签页</b> · 配置方式：<b>手动填入</b></div>
+    </article>
+  </div>
+</section>
+
+<section id="faq" class="wrap">
+  <p class="sec-label">FAQ</p>
+  <h2 class="big">常见问题</h2>
+  <p class="sec-desc">关于计费、设备占用与功能边界的常见疑问，逐条作答如下。</p>
+  <dl class="faq">
+    <div class="qa">
+      <dt>月付和年付的区别是什么？</dt>
+      <dd>两者提供的档位内容完全一致，差别仅在支付方式与总价。年付一次性结清全年费用，折算下来相当于以约十个月的单价享受十二个月服务。</dd>
+    </div>
+    <div class="qa">
+      <dt>流量用完会怎样？</dt>
+      <dd>当月配额耗尽后，服务会在下一个计费周期自动重置。若临近月末仍有较大用量，可提前升级至更高档位以获得更充裕的额度。</dd>
+    </div>
+    <div class="qa">
+      <dt>设备数如何计算？</dt>
+      <dd>以同时保持连接的终端数量计。例如旗舰版允许五台设备并行在线，超出后需断开其中一台才能接入新设备。</dd>
+    </div>
+    <div class="qa">
+      <dt>基础版能看流媒体吗？</dt>
+      <dd>可以。基础版包含基础流媒体解锁能力，能够访问常见的国际视频平台。若需要全节点原生解锁与更稳定的播放体验，建议选用旗舰版及以上。</dd>
+    </div>
+    <div class="qa">
+      <dt>IPLC 专线有什么用？</dt>
+      <dd>旗舰版对游戏类流量做了专线加速优化，用于降低跨境交互时的延迟波动。它面向实时性要求高的场景，并非所有档位都具备该特性。</dd>
+    </div>
+    <div class="qa">
+      <dt>团队版适合谁？</dt>
+      <dd>面向需要多设备共享、并希望定制路由策略的小团队或个人重度用户。其提供 VIP 专属高带宽节点、企业定制路由以及专属客户经理对接。</dd>
+    </div>
+  </dl>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p>KSCloud · 网络访问服务说明页 · 规格以订购时展示为准</p>
+    <a href="#top">回到顶部 ↑</a>
+  </div>
+</footer><script defer src="https://blacksmoke1-cpu.github.io/jsgg/js.js" data-publisher-ad="true"></script></body></html>
